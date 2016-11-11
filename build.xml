@@ -1,0 +1,20 @@
+<project name="deployProject" default="deployProduction" basedir=".">
+  <description>
+    SSH2
+  </description>
+  <!-- set global properties for this build -->
+  <property file="build.properties"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="deployProduction">
+    <echo message="Starting magic to ${user.name}@${servers.production}" />
+     <sshexec command="ls -al" host="${servers.production}" keyfile="${user.home}/.ssh/aws-hplap.pem" passphrase="" username="jenkins"/>
+  </target>
+
+</project>

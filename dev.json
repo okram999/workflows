@@ -1,0 +1,11 @@
+{
+	"dev": [
+    "ec2-54-201-247-249.us-west-2.compute.amazonaws.com",
+		"2.abc.com",
+		"3.abc.com"
+	],
+	"test": [
+		"4.abc.com"
+	]
+
+}
